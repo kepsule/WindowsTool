@@ -25,6 +25,7 @@ namespace FileCreator
             label1.Text = "タイトルを入力してください。";
             label2.Text = "詳細を入力してください。";
             textBox1.Focus();
+            System.IO.Directory.CreateDirectory(SavedFolder);
         }
 
         //ボタン押下時の動作
@@ -64,6 +65,16 @@ namespace FileCreator
             textBox1.Text = "";
             textBox2.Text = "";
             textBox1.Focus();
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "title1";
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(SavedFolder);
         }
     }
 }
